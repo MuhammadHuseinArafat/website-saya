@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website profil dan portofolio pelajar untuk latihan GitHub Pages">
+  <title>Portofolio Saya | Pelajar Informatika</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#beranda">Websiteku</a>
+
+      <button class="menu-toggle" id="menuToggle" type="button"
+              aria-label="Buka menu" aria-expanded="false" aria-controls="mainNav">
+        Menu
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#keterampilan">Keterampilan</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#kontak">Kontak</a>
+        <button class="theme-toggle" id="themeToggle" type="button"
+                aria-label="Ganti mode tampilan">Mode Gelap</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero">
+      <div class="container">
+        <p class="eyebrow">Selamat datang</p>
+        <h1>Halo, saya <span class="accent">Muhammad Husein Arafat</span></h1>
+        <p class="lead">
+          Saya <span id="typing" class="typing" aria-live="polite">Guru Informatika</span>
+        </p>
+        <p class="lead">
+          Website ini saya buat dengan HTML, CSS, dan JavaScript, lalu
+          dipublikasikan memakai GitHub Pages.
+        </p>
+        <a class="button" href="#proyek">Lihat proyek</a>
+      </div>
+    </section>
+
+    <section id="tentang" class="section">
+      <div class="container">
+        <h2>Tentang Saya</h2>
+        <p>
+          Saya bersekolah di SMA MTA SURAKARTA, kelas XI-MIPA-3. Saya tertarik pada
+          pemrograman, desain web, dan cara kerja internet.
+        </p>
+        <p>
+          Tujuan saya adalah membuat proyek sendiri dan membagikannya melalui
+          internet.
+        </p>
+        <ul class="stats">
+          <li><strong data-count="3">0</strong><span>Proyek selesai</span></li>
+          <li><strong data-count="12">0</strong><span>Commit di GitHub</span></li>
+          <li><strong data-count="5">0</strong><span>Teknologi dipelajari</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="keterampilan" class="section section-alt">
+      <div class="container">
+        <h2>Keterampilan</h2>
+        <ul class="skill-list">
+          <li class="skill">
+            <div class="skill-head"><span>HTML</span><span>80%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="80"></div></div>
+          </li>
+          <li class="skill">
+            <div class="skill-head"><span>CSS</span><span>70%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="70"></div></div>
+          </li>
+          <li class="skill">
+            <div class="skill-head"><span>JavaScript</span><span>50%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="50"></div></div>
+          </li>
+          <li class="skill">
+            <div class="skill-head"><span>GitHub</span><span>60%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="60"></div></div>
+          </li>
+        </ul>
+        <p class="note">Angka di atas hanya contoh. Ganti dengan kemampuan Anda yang sebenarnya.</p>
+      </div>
+    </section>
+
+    <section id="proyek" class="section">
+      <div class="container">
+        <h2>Proyek</h2>
+
+        <div class="filters" role="group" aria-label="Filter proyek">
+          <button class="filter active" type="button" data-filter="semua">Semua</button>
+          <button class="filter" type="button" data-filter="web">Web</button>
+          <button class="filter" type="button" data-filter="belajar">Belajar</button>
+        </div>
+
+        <ul class="projects" id="projectList">
+          <li class="card" data-category="web">
+            <h3>Website Profil</h3>
+            <p>Halaman profil responsif dengan HTML dan CSS.</p>
+            <span class="tag">Web</span>
+          </li>
+          <li class="card" data-category="web">
+            <h3>Kalkulator Sederhana</h3>
+            <p>Contoh latihan JavaScript untuk menghitung angka.</p>
+            <span class="tag">Web</span>
+          </li>
+          <li class="card" data-category="belajar">
+            <h3>Catatan Belajar Git</h3>
+            <p>Ringkasan istilah repository, commit, dan branch.</p>
+            <span class="tag">Belajar</span>
+          </li>
+        </ul>
+        <p class="note" id="emptyMessage" hidden>Belum ada proyek pada kategori ini.</p>
+      </div>
+    </section>
+
+    <section id="kontak" class="section section-alt">
+      <div class="container">
+        <h2>Kontak</h2>
+        <p>
+          Tulis pesan di bawah ini. Formulir ini hanya contoh tampilan dan
+          <strong>tidak mengirim data ke mana pun</strong>, karena GitHub Pages
+          tidak menjalankan backend.
+        </p>
+        <form id="contactForm" class="form" novalidate>
+          <label for="nama">Nama</label>
+          <input id="nama" name="nama" type="text" autocomplete="off" required>
+
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+          <button class="button" type="submit">Kirim (contoh)</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+        <p class="note">
+          Jangan menuliskan nomor telepon, alamat rumah, atau data pribadi
+          lain di website yang dipublikasikan.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Muhammad Husein Arafat. Dibuat untuk latihan GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Kembali ke atas" hidden>&uarr;</button>
+
+</body>
+</html>
